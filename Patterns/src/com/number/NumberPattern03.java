@@ -15,7 +15,7 @@ public class NumberPattern03 {
 		Scanner sc= new Scanner(System.in);
 		int n=sc.nextInt();
 		
-		for(int i=0; i<=n; i++)
+		for(int i=0; i<n; i++)
 		{
 			//1st
 			for(int j=(n-i); j>0; j--)
@@ -23,17 +23,19 @@ public class NumberPattern03 {
 				System.out.print(" ");
 			}
 			//2nd
-//			for(int j=0; j<(n-i) j++)
+//			for(int j=0; j<(n-i); j++)
 //			{
-//				System.out.print(" "));
+//				System.out.print(" ");
 //			}
 			for(int k=0; k<n;k++)
 			{
-				System.out.print((k+1));
+				System.out.print(k+1);
 			}
 			System.out.println();
 		}
 		sc.close();
+		
+
 	}
 
 }
