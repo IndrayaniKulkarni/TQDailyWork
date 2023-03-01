@@ -1,3 +1,5 @@
+// check ma'am solution too
+// and save as HalfSortingSolution
 package com.array1;
 
 import java.util.Arrays;
@@ -42,13 +44,17 @@ public class HalfSorting {
 		FreqNumber.input(num);
 		
 		int dec[] = new int[n/2+1];
-		int asc[] = new int[n/2+1];
+		int asc[] = new int[n/2];
 		
-		for(int i=0; i<num.length/2; i++) {
+		for(int i=0; i<num.length/2+1; i++) {
 			dec[i]=num[i];
 		}
-		for(int i=0; i<num.length/2; i++) {
-			asc[i]=num[i];
+		// num   1 2 3 4 7 6 5
+		// index 0 1 2 3 4 5 6
+		int k=0;
+		for(int i=num.length-1; i>(num.length/2); i--) {
+			asc[k]=num[i];
+			k++;
 		}
 		
 		sortDes(dec);
