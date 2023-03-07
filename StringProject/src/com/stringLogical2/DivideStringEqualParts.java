@@ -7,7 +7,7 @@ public class DivideStringEqualParts {
 
 	public static void divideString(String str) {
 		int len = str.length();
-	    int n =  4; //no. of substring
+	    int n =  2; //no. of substring
 	    
 	    int noOfChars = len/n;
 	    String splitStr[] = new String[n];
