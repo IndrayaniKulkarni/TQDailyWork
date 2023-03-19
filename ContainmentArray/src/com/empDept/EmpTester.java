@@ -80,8 +80,8 @@ public class EmpTester {
 //		print(e);
 //		highestSalary(e);
 //		sort(e);
-//		print(e);
-		empDepartmemtwise(e,d);
+		print(e);
+//		empDepartmemtwise(e,d);
 	}
 
 }

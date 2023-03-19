@@ -1,3 +1,4 @@
+
 package com.number;
 
 public class NumberPatter112 {
