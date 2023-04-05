@@ -54,7 +54,9 @@ public class TreeSetDemo3 {
 		//floor
 		System.out.println("floor(40) ( less than or equal tothe given element) = "+ts.floor(40));
 		
-		
+		//subset
+		System.out.println("subset(30,90) = "+ts.subSet(30, 90));
+		System.out.println("subset(50,false,100,true) = "+ts.subSet(50, false, 100, true));
 		
 	}
 

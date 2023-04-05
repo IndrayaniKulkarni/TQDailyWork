@@ -8,6 +8,7 @@ public class TreeSetDemo {
 
 	public static void main(String[] args) {
 	//homework	
+		//treeset - can't iterate with index
 		TreeSet<String> colours = new TreeSet<>();
 		
 		// boolean add
