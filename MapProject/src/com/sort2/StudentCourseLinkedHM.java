@@ -7,11 +7,31 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class StudentCourseLinkedHM {
-	//incomplete
+	
 	public static void listByCourse(HashMap<Student,Course> stLs) {
 		
 		ArrayList<Course> c = new ArrayList<>(stLs.values());
-		Collections.sort(c);
+		Collections.sort(c, new CourseIdComparator());
+		
+		LinkedHashMap<Course, ArrayList<Student>> courseStu = new LinkedHashMap<>();
+		
+
+	    for (Course co : c) {
+	        courseStu.put(co, new ArrayList<>());
+	    }
+
+	    for (Map.Entry<Student, Course> entry : stLs.entrySet()) {
+	        Student s = entry.getKey();
+	        Course co = entry.getValue();
+	        courseStu.get(co).add(s);
+	    }
+
+	    for (Map.Entry<Course, ArrayList<Student>> entry : courseStu.entrySet()) {
+	        Course co = entry.getKey();
+	        ArrayList<Student> stuList = entry.getValue();
+	        System.out.println("Course: " + co.getcName() + ", Course ID: " + co.getcId() + ", Students: " + stuList);
+	    }
+		
 	}
 	public static void sortByKey(HashMap<Student, Course> stLs) {
 		

@@ -1,6 +1,7 @@
 package com.bookEx;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 class Book implements Comparable<Book>{
 	private int id;
@@ -40,18 +41,12 @@ class Book implements Comparable<Book>{
 	@Override
 	public int compareTo(Book b) {
 		if(this.id == b.id) {
-			return 0;
-//			or
-//			return 
-		}
-		else {
-			if(this.id>b.id) {
-				return 1;
-			}
-			else {
-				return -1;
-			}
-		}
+	        return 0;
+	    } else if(this.id > b.id) {
+	        return 1;
+	    } else {
+	        return -1;
+	    }
 	}
 	
 }
@@ -71,9 +66,12 @@ public class BookTest {
 		}
 		
 		// not allowing
-//		Collections.sort(tbr);
+		Collections.sort(tbr);
 		
-		
+		System.out.println("---------------------------------------------");
+		for(Book b:tbr) {
+			System.out.println(b);
+		}
 	}
 
 }
